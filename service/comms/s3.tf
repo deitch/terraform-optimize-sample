@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "bucket" {
 resource "aws_s3_object" "object1" {
   for_each = aws_s3_bucket.bucket
   bucket   = each.value.id
-  key      = "object1"
+  key      = "object1_new"
   content  = "Lots of unique information for my bucket"
 }
 
